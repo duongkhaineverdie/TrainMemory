@@ -79,14 +79,14 @@ fun HomeScreen(
                 text = stringResource(id = R.string.app_name),
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                fontSize = 88.sp,
+                fontSize = 80.sp,
                 maxLines = 2,
                 lineHeight = 70.sp,
                 textAlign = TextAlign.Center,
                 overflow = TextOverflow.Ellipsis,
                 color = Color.White,
                 modifier = Modifier
-                    .border(2.dp, Color.White, shape = RoundedCornerShape(20.dp)),
+                    .border(2.dp, Color.White, shape = RoundedCornerShape(15.dp)),
                 letterSpacing = 2.sp
             )
         }
@@ -94,18 +94,16 @@ fun HomeScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
-                .padding(horizontal = 30.dp),
+                .padding(horizontal = 50.dp),
             verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(10.dp)
-
+            Row(
+                modifier = Modifier,
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                Box(modifier = Modifier, contentAlignment = Alignment.Center) {
                     Text(
                         text = stringResource(id = R.string.best_score_home),
                         style = MaterialTheme.typography.titleLarge,
@@ -127,7 +125,7 @@ fun HomeScreen(
                         fontSize = 40.sp
                     )
                 }
-                Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                Box(contentAlignment = Alignment.Center) {
                     Text(
                         text = highScore.toString(),
                         style = MaterialTheme.typography.titleLarge,
@@ -171,7 +169,7 @@ fun HomeScreen(
                 ) {
                     Text(
                         text = stringResource(id = R.string.start_game).uppercase(),
-                        modifier = Modifier.padding(30.dp),
+                        modifier = Modifier.padding(10.dp),
                         style = MaterialTheme.typography.titleLarge.copy(
                             drawStyle = Stroke(
                                 miter = 10f,
@@ -186,7 +184,7 @@ fun HomeScreen(
                     )
                     Text(
                         text = stringResource(id = R.string.start_game).uppercase(),
-                        modifier = Modifier.padding(30.dp),
+                        modifier = Modifier.padding(10.dp),
                         style = MaterialTheme.typography.titleLarge,
                         color = Color.White,
                         fontWeight = FontWeight.Bold,

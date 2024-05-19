@@ -62,8 +62,8 @@ fun TrainMemoryGameScreen(navController: NavHostController) {
         totalAlive = uiState.totalAlive,
         brushBackground = Brush.verticalGradient(
             listOf(
-                Color(0xFFDDDDDD),
-                Color(0xFF797979),
+                Color(0xFF222121),
+                Color(0xFF757070),
             )
         ),
         listNumberCorrect = uiState.listCorrect,
@@ -103,13 +103,15 @@ fun TrainMemoryGameScreen(
                     ),
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center,
-                    letterSpacing = 2.sp
+                    letterSpacing = 2.sp,
+                    color = Color.White
                 )
                 Text(
                     text = stringResource(id = R.string.regex_level_game, (levelGame - 1)),
                     style = MaterialTheme.typography.titleLarge.copy(
                         fontWeight = FontWeight.SemiBold
-                    )
+                    ),
+                    color = Color.White
                 )
             }
         }
@@ -175,7 +177,8 @@ fun TrainMemoryGameScreen(
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.titleLarge.copy(
                     fontSize = 30.sp,
-                )
+                ),
+                color = Color.White
             )
         }
     }
@@ -199,7 +202,7 @@ fun TrainMemoryGameScreen(
                 onClick = onClickNewGame,
                 shape = RoundedCornerShape(20.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = Color(0xFF3280D1),
+                    containerColor = Color(0xFF122131),
                     contentColor = Color.White
                 ),
                 elevation = CardDefaults.cardElevation(
@@ -222,22 +225,14 @@ private fun TrainMemoryGameScreenPreview() {
     TrainMemoryTheme {
         TrainMemoryGameScreen(
             modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    brush = Brush.verticalGradient(
-                        listOf(
-                            Color(0xFF415670),
-                            Color(0xFF162E4B),
-                        )
-                    )
-                ),
+                .fillMaxSize(),
             levelGame = 2,
             onClickButton = {/* no-op */ },
             onClickNewGame = {/* no-op */ },
             brushBackground = Brush.verticalGradient(
                 listOf(
-                    Color(0xFFDDDDDD),
-                    Color(0xFF797979),
+                    Color(0xFF222121),
+                    Color(0xFF757070),
                 )
             ),
             listNumberCorrect = listOf(0, 2, 3),
