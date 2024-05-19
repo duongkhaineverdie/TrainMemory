@@ -1,4 +1,4 @@
-package com.emenike.trainmemory.presentation.ui.truecolorgame.components
+package com.emenike.trainmemory.presentation.ui.trainmemorygame.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.PaddingValues

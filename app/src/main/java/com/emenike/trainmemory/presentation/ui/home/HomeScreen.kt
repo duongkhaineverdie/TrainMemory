@@ -47,7 +47,7 @@ fun HomeScreen(navController: NavHostController) {
     val uiState by homeViewModel.uiState.collectAsState()
     HomeScreen(
         modifier = Modifier.fillMaxSize(),
-        onClickAction = { navController.navigate(Destination.NumberGuessingGameScreen.fullRoute) },
+        onClickAction = { navController.navigate(Destination.TrainMemoryScreen.fullRoute) },
         highScore = uiState.highScore
     )
 }
@@ -84,9 +84,10 @@ fun HomeScreen(
                 lineHeight = 70.sp,
                 textAlign = TextAlign.Center,
                 overflow = TextOverflow.Ellipsis,
-                color = Color.Yellow,
+                color = Color.White,
                 modifier = Modifier
-                    .border(2.dp, Color.White, shape = RoundedCornerShape(20.dp))
+                    .border(2.dp, Color.White, shape = RoundedCornerShape(20.dp)),
+                letterSpacing = 2.sp
             )
         }
         Column(
@@ -108,7 +109,7 @@ fun HomeScreen(
                     Text(
                         text = stringResource(id = R.string.best_score_home),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color.Yellow,
+                        color = Color.White,
                         textAlign = TextAlign.Center,
                         fontSize = 40.sp
                     )
@@ -121,7 +122,7 @@ fun HomeScreen(
                                 join = StrokeJoin.Round
                             )
                         ),
-                        color = Color(0xFFB31D1D),
+                        color = Color.Black,
                         textAlign = TextAlign.Center,
                         fontSize = 40.sp
                     )
@@ -154,7 +155,7 @@ fun HomeScreen(
                     .fillMaxWidth(),
                 shape = RoundedCornerShape(20.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = Color(0xFFB31D1D)
+                    containerColor = Color(0xFF644141)
                 ),
                 elevation = CardDefaults.cardElevation(
                     defaultElevation = 40.dp
@@ -187,7 +188,7 @@ fun HomeScreen(
                         text = stringResource(id = R.string.start_game).uppercase(),
                         modifier = Modifier.padding(30.dp),
                         style = MaterialTheme.typography.titleLarge,
-                        color = Color.Yellow,
+                        color = Color.White,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 10.sp,
                         fontSize = 30.sp

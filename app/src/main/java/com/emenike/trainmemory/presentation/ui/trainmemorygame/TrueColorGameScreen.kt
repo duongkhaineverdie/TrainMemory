@@ -1,4 +1,4 @@
-package com.emenike.trainmemory.presentation.ui.truecolorgame
+package com.emenike.trainmemory.presentation.ui.trainmemorygame
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -40,16 +40,16 @@ import androidx.navigation.NavHostController
 import com.emenike.trainmemory.R
 import com.emenike.trainmemory.presentation.ui.component.CustomDialog
 import com.emenike.trainmemory.presentation.ui.theme.TrainMemoryTheme
-import com.emenike.trainmemory.presentation.ui.truecolorgame.components.ItemButton
+import com.emenike.trainmemory.presentation.ui.trainmemorygame.components.ItemButton
 import org.koin.androidx.compose.koinViewModel
 import kotlin.math.sqrt
 
 @Composable
-fun TrueColorGameScreen(navController: NavHostController) {
+fun TrainMemoryGameScreen(navController: NavHostController) {
     val trainMemoryViewModel: TrainMemoryViewModel = koinViewModel()
     val uiState by trainMemoryViewModel.stateFlow.collectAsState()
 
-    TrueColorGameScreen(
+    TrainMemoryGameScreen(
         modifier = Modifier
             .fillMaxSize(),
         levelGame = uiState.levelGame,
@@ -72,7 +72,7 @@ fun TrueColorGameScreen(navController: NavHostController) {
 }
 
 @Composable
-fun TrueColorGameScreen(
+fun TrainMemoryGameScreen(
     modifier: Modifier = Modifier,
     levelGame: Int = 2,
     highScore: Int = 0,
@@ -96,6 +96,15 @@ fun TrueColorGameScreen(
         val levelColor = (sqrt(levelGame.toFloat()) + 1).toInt()
         Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.BottomCenter) {
             Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Bottom) {
+                Text(
+                    text = stringResource(id = R.string.title_home_game, (levelGame - 1)),
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        fontWeight = FontWeight.Normal
+                    ),
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center,
+                    letterSpacing = 2.sp
+                )
                 Text(
                     text = stringResource(id = R.string.regex_level_game, (levelGame - 1)),
                     style = MaterialTheme.typography.titleLarge.copy(
@@ -209,9 +218,9 @@ fun TrueColorGameScreen(
 
 @Composable
 @Preview(name = "NumberGuessingGame", showSystemUi = true)
-private fun NumberGuessingGameScreenPreview() {
+private fun TrainMemoryGameScreenPreview() {
     TrainMemoryTheme {
-        TrueColorGameScreen(
+        TrainMemoryGameScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .background(

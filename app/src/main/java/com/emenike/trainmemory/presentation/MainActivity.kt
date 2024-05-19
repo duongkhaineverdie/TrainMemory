@@ -1,7 +1,6 @@
 package com.emenike.trainmemory.presentation
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -19,8 +18,8 @@ import com.emenike.trainmemory.domain.navigation.Destination
 import com.emenike.trainmemory.domain.navigation.NavHostNoteApp
 import com.emenike.trainmemory.domain.navigation.composable
 import com.emenike.trainmemory.presentation.ui.home.HomeScreen
-import com.emenike.trainmemory.presentation.ui.truecolorgame.TrueColorGameScreen
 import com.emenike.trainmemory.presentation.ui.theme.TrainMemoryTheme
+import com.emenike.trainmemory.presentation.ui.trainmemorygame.TrainMemoryGameScreen
 
 class MainActivity : ComponentActivity() {
 
@@ -64,6 +63,6 @@ class MainActivity : ComponentActivity() {
 private fun SetupNavigation(navController: NavHostController) {
     NavHostNoteApp(navController = navController, startDestination = Destination.HomeScreen) {
         composable(Destination.HomeScreen) { HomeScreen(navController) }
-        composable(Destination.NumberGuessingGameScreen) { TrueColorGameScreen(navController) }
+        composable(Destination.TrainMemoryScreen) { TrainMemoryGameScreen(navController) }
     }
 }

@@ -1,4 +1,4 @@
-package com.emenike.trainmemory.presentation.ui.truecolorgame
+package com.emenike.trainmemory.presentation.ui.trainmemorygame
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel

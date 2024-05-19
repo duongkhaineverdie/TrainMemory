@@ -14,7 +14,7 @@ sealed class Destination(protected val route: String, vararg params: String) {
 
     data object HomeScreen : NoArgumentsDestination("home")
 
-    data object NumberGuessingGameScreen : Destination("number_guessing_game")
+    data object TrainMemoryScreen : Destination("train_memory")
 }
 
 internal fun String.appendParams(vararg params: Pair<String, Any?>): String {

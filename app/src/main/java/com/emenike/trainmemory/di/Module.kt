@@ -6,7 +6,7 @@ import com.emenike.trainmemory.domain.interactors.GetHighScoreFromDSUseCase
 import com.emenike.trainmemory.domain.interactors.SaveHighScoreDSUseCase
 import com.emenike.trainmemory.domain.repository.RepositoryImpl
 import com.emenike.trainmemory.presentation.ui.home.HomeViewModel
-import com.emenike.trainmemory.presentation.ui.truecolorgame.TrainMemoryViewModel
+import com.emenike.trainmemory.presentation.ui.trainmemorygame.TrainMemoryViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
 

@@ -5,4 +5,5 @@
     <string name="regex_level_game">Game Level: %d</string>
     <string name="new_game">New Game</string>
     <string name="start_game">Start Game</string>
+    <string name="title_home_game">Choose position at under to the same above</string>
 </resources>
