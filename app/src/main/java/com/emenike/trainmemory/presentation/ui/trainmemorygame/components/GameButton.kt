@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ItemButton(
+fun GameButton(
     modifier: Modifier = Modifier,
     border: BorderStroke = BorderStroke(1.dp, Color.Black),
     color: Color = Color.Gray,
@@ -45,7 +45,7 @@ fun ItemButton(
 )
 @Composable
 private fun PreviewButtonColor() {
-    ItemButton(
+    GameButton(
         modifier = Modifier.fillMaxSize(),
         onClick = {/* no-op */ }
     )

@@ -2,7 +2,7 @@ package com.emenike.trainmemory.presentation.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emenike.trainmemory.domain.interactors.GetHighScoreFromDSUseCase
+import com.emenike.trainmemory.domain.interactors.GetHighScoreFromDSUseCaseTrainMemory
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    val getHighScoreFromDSUseCase: GetHighScoreFromDSUseCase,
+    val getHighScoreFromDSUseCase: GetHighScoreFromDSUseCaseTrainMemory,
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(HomeUiState())
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()

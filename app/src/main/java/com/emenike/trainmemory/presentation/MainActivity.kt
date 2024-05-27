@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.emenike.trainmemory.domain.navigation.Destination
-import com.emenike.trainmemory.domain.navigation.NavHostNoteApp
+import com.emenike.trainmemory.domain.navigation.NavHostTrainMemory
 import com.emenike.trainmemory.domain.navigation.composable
 import com.emenike.trainmemory.presentation.ui.home.HomeScreen
 import com.emenike.trainmemory.presentation.ui.theme.TrainMemoryTheme
@@ -61,7 +61,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun SetupNavigation(navController: NavHostController) {
-    NavHostNoteApp(navController = navController, startDestination = Destination.HomeScreen) {
+    NavHostTrainMemory(navController = navController, startDestination = Destination.HomeScreen) {
         composable(Destination.HomeScreen) { HomeScreen(navController) }
         composable(Destination.TrainMemoryScreen) { TrainMemoryGameScreen(navController) }
     }

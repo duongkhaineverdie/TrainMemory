@@ -40,7 +40,7 @@ import androidx.navigation.NavHostController
 import com.emenike.trainmemory.R
 import com.emenike.trainmemory.presentation.ui.component.CustomDialog
 import com.emenike.trainmemory.presentation.ui.theme.TrainMemoryTheme
-import com.emenike.trainmemory.presentation.ui.trainmemorygame.components.ItemButton
+import com.emenike.trainmemory.presentation.ui.trainmemorygame.components.GameButton
 import org.koin.androidx.compose.koinViewModel
 import kotlin.math.sqrt
 
@@ -124,7 +124,7 @@ fun TrainMemoryGameScreen(
             columns = GridCells.Fixed(levelColor)
         ) {
             items(levelColor * levelColor) { i ->
-                ItemButton(
+                GameButton(
                     modifier = Modifier.fillMaxSize(),
                     border = BorderStroke(0.2.dp, Color.Black),
                     color = if (listNumberCorrect.contains(i)) Color(color) else Color.Gray,
@@ -154,7 +154,7 @@ fun TrainMemoryGameScreen(
             columns = GridCells.Fixed(levelColor)
         ) {
             items(levelColor * levelColor) { i ->
-                ItemButton(
+                GameButton(
                     modifier = Modifier.fillMaxSize(),
                     border = BorderStroke(0.2.dp, Color.Black),
                     color = if (listNumberSelected.contains(i)) Color(color) else Color.Gray,

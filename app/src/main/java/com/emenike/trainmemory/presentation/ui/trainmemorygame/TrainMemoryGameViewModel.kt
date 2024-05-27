@@ -3,8 +3,8 @@ package com.emenike.trainmemory.presentation.ui.trainmemorygame
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emenike.trainmemory.domain.interactors.GetHighScoreFromDSUseCase
-import com.emenike.trainmemory.domain.interactors.SaveHighScoreDSUseCase
+import com.emenike.trainmemory.domain.interactors.GetHighScoreFromDSUseCaseTrainMemory
+import com.emenike.trainmemory.domain.interactors.SaveHighScoreDSUseCaseTrainMemory
 import com.emenike.trainmemory.utils.Constants
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.StateFlow
@@ -18,8 +18,8 @@ import kotlin.random.Random
 
 class TrainMemoryViewModel(
     savedStateHandle: SavedStateHandle,
-    val getHighScoreFromDSUseCase: GetHighScoreFromDSUseCase,
-    val saveHighScoreDSUseCase: SaveHighScoreDSUseCase,
+    val getHighScoreFromDSUseCase: GetHighScoreFromDSUseCaseTrainMemory,
+    val saveHighScoreDSUseCase: SaveHighScoreDSUseCaseTrainMemory,
 ) : ViewModel() {
 
     private val _stateFlow: MutableStateFlow<TrainMemoryUiState> =

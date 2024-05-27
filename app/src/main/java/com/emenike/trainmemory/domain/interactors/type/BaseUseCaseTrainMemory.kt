@@ -3,7 +3,7 @@ package com.emenike.trainmemory.domain.interactors.type
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 
-abstract class BaseUseCase<IN, OUT>(
+abstract class BaseUseCaseTrainMemory<IN, OUT>(
     private val dispatcher: CoroutineDispatcher,
 ) {
     suspend operator fun invoke(param: IN): Result<OUT> = withContext(dispatcher) {
